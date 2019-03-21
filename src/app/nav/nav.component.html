@@ -1,0 +1,35 @@
+<div id='nav-menu-wrapper'>
+<div class="sidenav-header">
+<div class='title'>
+	<strong>{{username}}</strong>
+</div>
+<div class="border"></div>
+<div class="profile-image">
+<img src='assets/images/blank-image.jpg' />
+</div>
+<div class="border"></div>
+</div>
+<!-- start menu -->	
+<button mat-raised-button color='primary' (click)="toggle('first')" [ngClass]="['nav-button']">Dashboard</button>
+<div class='panel'>
+<nav class='nav-menu {{is_active["first"] ? "active" : "hide"}}' >
+<ul class="nav-group">
+<li><a routerLink="/dashboard">Main</a></li>
+</ul>
+</nav> 
+</div>
+
+<button mat-raised-button color='primary' (click)="toggle('second')" [ngClass]="['nav-button']">Delivery</button>
+<div class='panel'>
+<nav class='nav-menu {{is_active["second"] ? "active" : "hide"}}' >
+<ul class="nav-group">
+<li><a routerLink="/delivery">List</a></li>
+</ul>
+</nav> 
+</div>
+
+
+<button mat-raised-button color='primary' routerLink="/logout" [ngClass]="['nav-button']">Logout</button>
+
+<!-- end menu -->	
+</div>

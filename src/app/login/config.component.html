@@ -1,0 +1,25 @@
+<div class="content">
+<div class='container'>
+<div class="row">
+<div class='col-md-5 offset-md-3'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Config</h1>
+</div>
+<div class='box-body'>
+<form class="example-container" >
+<mat-form-field>
+<input matInput placeholder="IP Address" [(ngModel)]="ip_address" [ngModelOptions]="{standalone: true}">
+</mat-form-field>
+<div class="row">
+<div class="col-md-5">
+<button ngClass="btn btn-md btn-primary btn-block" (click)="update_address()">Update</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

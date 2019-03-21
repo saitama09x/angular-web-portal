@@ -1,0 +1,37 @@
+<section class="content-header">
+  
+</section>
+<section class='content'>
+<div class='container'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Global Tracking</h1>
+</div>
+<div class='box-body'>
+<mat-grid-list cols="2" rowHeight="100px" ngClass="form-grid">
+<mat-grid-tile>
+<div class='form-group'>
+<label>Delivery No.</label>
+<mat-form-field>
+  <mat-select placeholder="Please select" [(ngModel)]="delivery_no" (ngModelChange)="changeDeliv($event)">
+  	<mat-option *ngFor="let label of delivery_label" [value]="label.id">
+      {{label.delivery_no}}
+    </mat-option>
+   </mat-select>
+ </mat-form-field>
+</div>
+</mat-grid-tile>
+</mat-grid-list>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="17">
+	<agm-polyline [strokeColor]="blue" [strokeWeight]="1" >
+		<ng-container>
+		 <agm-polyline-point *ngFor="let pol of polyline" [latitude]="pol.latitude" [longitude]="pol.longitude">
+		 	<agm-marker [latitude]="pol.latitude" [longitude]="pol.longitude" [label]="pol.label" [title]="asdasd" [markerClickable]="true"></agm-marker>
+		 </agm-polyline-point>
+		</ng-container>
+	</agm-polyline>
+</agm-map>
+</div>
+</div>
+</div>
+</section>

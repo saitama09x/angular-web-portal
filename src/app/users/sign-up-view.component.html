@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+<mat-toolbar-row>
+<span>Please fill the form</span>
+</mat-toolbar-row>
+</mat-toolbar>
+
+<form [formGroup]="form" (ngSubmit) = "SignUp(form)" ngClass="sign-up-form">
+<div class='form-group'>
+<mat-form-field>
+<input matInput placeholder="Firstname" formControlName="FirstName">
+</mat-form-field>
+</div>
+<div class='form-group'>
+<mat-form-field>
+<input matInput placeholder="Lastname" formControlName="LastName">
+</mat-form-field>
+</div>
+<div class='form-group'>
+<mat-form-field>
+<input matInput placeholder="Username" formControlName="UserName" >
+</mat-form-field>
+</div>
+<div class='form-group'>
+<mat-form-field>
+<input matInput type="password" placeholder="Password" formControlName="PassWord">
+</mat-form-field>
+</div>
+<div class='form-group'>
+<button mat-raised-button color="accent">Submit</button>
+</div>
+</form>
+

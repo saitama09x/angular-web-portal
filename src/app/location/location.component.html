@@ -1,0 +1,53 @@
+<section class='content'>
+<div class='container'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Global Tracking</h1>
+</div>
+<div class='box-body'>
+
+<div class='row'>
+<div class='col-md-3'>
+<div class="form-group">
+<label>Source</label>
+<h3>{{detail.source}}</h3>
+</div>
+</div>
+<div class='col-md-3'>
+<div class="form-group">
+<label>Destination</label>
+<h3>{{detail.destination}}</h3>
+</div>
+</div>
+<div class='col-md-3'>
+<div class="form-group">
+<label>Details</label>
+<h3>{{detail.routes_details}}</h3>
+</div>
+</div>
+</div>
+
+<agm-map [latitude]="lat" [longitude]="long"  [zoom]="17" [disableDefaultUI]="false">
+<agm-polyline [strokeColor]="'#FF0000'" [strokeWeight]="1" >
+<ng-container>
+<agm-polyline-point *ngFor="let mark of markers" [latitude]="mark.latitude" [longitude]="mark.longitude">
+<agm-marker [latitude]="mark.latitude" [longitude]="mark.longitude" [markerClickable]="true">
+</agm-marker>
+</agm-polyline-point>
+</ng-container>
+</agm-polyline>
+
+<agm-polyline [strokeColor]="blue" [strokeWeight]="1" >
+<ng-container>
+<agm-polyline-point *ngFor="let track of track_markers" [latitude]="track.latitude" [longitude]="track.longitude">
+<agm-marker [iconUrl]="track.icon" [latitude]="track.latitude" [longitude]="track.longitude" [markerClickable]="true">
+</agm-marker>
+</agm-polyline-point>
+</ng-container>
+</agm-polyline>
+</agm-map>
+
+</div>
+</div>
+</div>
+</section>

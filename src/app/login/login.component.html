@@ -1,0 +1,41 @@
+<ng-container #container>
+
+</ng-container>
+
+<ng-template #login>
+<div class="content">
+<div class='container'>
+<div class="row">
+<div class='col-md-5 offset-md-3'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Login</h1>
+</div>
+<div class='box-body'>
+<form class="example-container" [formGroup]="loginForm" (ngSubmit) = "onFormSubmit(loginForm)">
+<mat-form-field>
+<input matInput placeholder="Username" formControlName="UserName">
+</mat-form-field>
+<mat-form-field>
+<input matInput type="password" placeholder="Password" formControlName="PassWord">
+</mat-form-field>
+<div class="row">
+<div class="col-md-5">
+<button ngClass="btn btn-md btn-primary btn-block" >Login</button>
+</div>
+<div class="col-md-5">
+<button type="button" ngClass="btn btn-md btn-success btn-block" (click)="signUpDialog()">Sign Up</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</ng-template>
+
+<ng-template #dashboard>
+<dashboard-view></dashboard-view>
+</ng-template>

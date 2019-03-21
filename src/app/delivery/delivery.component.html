@@ -1,0 +1,37 @@
+<section class='content'>
+<div class='container'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Global Tracking</h1>
+</div>
+<div class='box-body'>
+<div class="form-group">
+<button (click)="addDelivery()" class="btn btn-md btn-success">Create</button>
+</div>
+<table class='table'>
+<thead><tr>
+<th>Transaction No.</th>
+<th>Unit No</th>
+<th>Routes Details</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Status</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+  <tr *ngFor="let delivery of deliveries">
+    <td>{{delivery.delivery_no}}</td>
+    <td>{{delivery.unit_no}}</td>
+    <td>{{delivery.routes_details}}</td>
+     <td>{{delivery.source}}</td>
+      <td>{{delivery.destination}}</td>
+      <td>{{delivery.status}}</td>
+    <td><button mat-raised-button color="primary" [routerLink]="['/delivery', delivery.id]">View</button></td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+

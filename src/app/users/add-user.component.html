@@ -1,0 +1,38 @@
+<div class='container'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Demo</h1>
+</div>
+<div class='box-body'>
+<div class='form-group'>
+<button type='button' mat-raised-button color="accent" (click)="go_back()">Back</button>
+</div>
+
+<div class='form-group'>
+<form [formGroup]="AddForm" (ngSubmit) = "onFormSubmit(AddForm)" >
+<div class='form-group'>
+<mat-form-field>
+<input matInput placeholder="Firstname" formControlName="FirstName">
+</mat-form-field>
+</div>
+<div class='form-group'>
+<mat-form-field>
+<input matInput placeholder="Lastname" formControlName="LastName">
+</mat-form-field>
+</div>
+<div class='form-group'>
+<mat-form-field>
+<input matInput placeholder="Username" formControlName="UserName">
+</mat-form-field>
+</div>
+<div class='form-group'>
+<mat-form-field>
+<input matInput placeholder="Password" [type]="password" formControlName="PassWord">
+</mat-form-field>
+</div>
+<button mat-raised-button color="accent" >Submit</button>
+</form>
+
+</div>
+</div>
+</div>

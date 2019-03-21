@@ -1,0 +1,146 @@
+@import '~@angular/material/theming';
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@include mat-core();
+
+
+$custom-color-primary: mat-palette($mat-indigo, 700, 300, 900);
+$custom-color-accent:  mat-palette($mat-green, 700, 300, 900);
+// The warn palette is optional (defaults to red).
+$custom-color-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$custom-color-theme: mat-light-theme($custom-color-primary, 
+    $custom-color-accent, 
+    $custom-color-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($custom-color-theme);
+
+$btn-color-primary: mat-palette($mat-teal, 500, 300, 500);
+$btn-color-accent: mat-palette($mat-green, 700, 300, 900);
+$btn-color-warn: mat-palette($mat-red, 500, 300, 500);
+
+$button-app-theme:   mat-light-theme(
+    $btn-color-primary, 
+    $btn-color-accent, 
+    $btn-color-warn);
+
+.unicorn-dark-theme {
+  @include angular-material-theme($button-app-theme);
+}
+
+$list_style : none;
+
+.form-grid{
+    width:45%;
+}
+
+agm-map {
+      height: 500px;
+}
+
+mdb-navbar-brand{
+    font-size:28px;
+    color:white;
+}
+
+.mat-toolbar.mat-primary{
+    margin-bottom:30px;
+}
+
+.sign-up-form .mat-form-field{
+    width:100%;
+}
+
+.login-body{
+    background:#e2e2e2;
+}
+
+.main-body{
+    background:#e2e2e2;
+}
+
+.mat-drawer-container{
+    background:#e2e2e2;
+}
+
+#nav-menu-wrapper .panel .nav-group{
+    padding-left: 0px;
+}
+
+#nav-menu-wrapper .panel .nav-group li{
+    padding: 0px;
+    text-align: center
+}
+
+.nav-group li{
+	list-style: $list_style;
+}
+
+.item-added-remove{
+    display:none;
+}
+
+.box.box-primary{
+	border-top-color: #3c8dbc;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.box-header.with-border{
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.box-header{
+	color: #444;
+    display: block;
+    padding: 10px;
+    position: relative
+}
+
+.box-header .box-title{
+	display: inline-block;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1;
+}
+
+.box-body{
+    padding:5%;
+}
+
+.content-header {
+    position: relative;
+}
+
+
+.content {
+    min-height: 250px;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#progress_edit{
+    position:absolute !important;
+    top:0px !important;
+    left:0px !important;
+}

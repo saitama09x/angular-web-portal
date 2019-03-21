@@ -1,0 +1,32 @@
+<mat-sidenav-container class="example-container">
+<mat-sidenav #sidenav [mode]="mode.value">
+<button mat-button (click)="sidenav.toggle()">Toggle</button>
+<pre-nav></pre-nav>
+</mat-sidenav>
+
+<mat-sidenav-content>
+<section class='content'>
+<div class='container'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Global Tracking</h1>
+</div>
+<div class='box-body'>
+
+<agm-map [latitude]="lat" [longitude]="long"  [zoom]="17" (mapRightClick)="onMapClick($event)">
+<agm-polyline [strokeColor]="blue" [strokeWeight]="1" >
+<ng-container>
+<agm-polyline-point *ngFor="let mark of markers" [latitude]="mark.latitude" [longitude]="mark.longitude">
+<agm-marker [latitude]="mark.latitude" [longitude]="mark.longitude" [label]="mark.label" [markerClickable]="true">
+</agm-marker>
+</agm-polyline-point>
+</ng-container>
+</agm-polyline>
+</agm-map>
+
+</div>
+</div>
+</div>
+</section>
+</mat-sidenav-content>
+</mat-sidenav-container>

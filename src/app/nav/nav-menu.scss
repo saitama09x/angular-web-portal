@@ -1,0 +1,33 @@
+#nav-menu-wrapper{
+	width:180px;
+}
+
+#nav-menu-wrapper .nav-button{
+	width:100%;
+}
+
+.nav-menu.active{
+	display:block;
+}
+
+.nav-menu.hide{
+	display:none;
+}
+
+#nav-menu-wrapper .sidenav-header .title{
+    padding:12px;
+}
+#nav-menu-wrapper .sidenav-header{
+      height:200px;
+      background:#2d6cce;
+}
+
+#nav-menu-wrapper .profile-image{
+	width: 100%;
+    text-align: center;
+   	padding: 5px;
+}
+
+#nav-menu-wrapper .profile-image img{
+	width:100px;
+}

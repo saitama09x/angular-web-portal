@@ -1,0 +1,38 @@
+<section class='content'>
+<div class='container'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Global Tracking</h1>
+</div>
+<div class='box-body'>
+<table class='table'>
+<thead><tr>
+<th>Weight</th>
+<th>Height</th>
+<th>Width</th>
+<th>Quantity</th>
+<th>Quality</th>
+<th>Front</th>
+<th>Back</th>
+<th>Ripen</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tbody>
+  <tr *ngFor="let item of itemlist">
+  	<td>{{item.weight}}</td>
+  	<td>{{item.height}}</td>
+  	<td>{{item.width}}</td>
+  	<td>{{item.qty}}</td>
+  	<td>{{item.quality + "%"}}</td>
+  	<td><img src="{{item.front}}" width="100"/></td>
+  	<td><img src="{{item.back}}" width="100"/></td>
+  	<td>{{item.ripen | date:'MMM dd, yyyy'}}</td>
+  	<td></td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>

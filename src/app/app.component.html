@@ -1,0 +1,28 @@
+<mat-sidenav-container class="example-container" [hasBackdrop]="false">
+<mat-sidenav #sidenav [mode]="mode.value" [(opened)]="open">
+<ng-container *ngIf="has_sidenav; then sidemenu">
+</ng-container>
+</mat-sidenav>
+<mat-sidenav-content>
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+<mdb-navbar-brand>
+<a href="javascript:void(0)" (click)="sidenav.toggle()">
+<div *ngIf="has_sidenav; then iconbar"></div>
+</a>
+&nbsp;
+<span>Admin Tracking System
+</span>
+</mdb-navbar-brand>
+</mdb-navbar>
+<mat-progress-bar *ngIf="progressbar.is_loading" mode="indeterminate"></mat-progress-bar>
+<router-outlet (activate)='activaterouter($event)'></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>
+
+<ng-template #iconbar>
+	<mdb-icon icon="reorder"></mdb-icon>
+</ng-template>
+
+<ng-template #sidemenu>
+	<pre-nav></pre-nav>
+</ng-template>

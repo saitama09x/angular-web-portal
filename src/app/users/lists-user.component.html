@@ -1,0 +1,32 @@
+<section class='content'>
+<div class='container'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Global Tracking</h1>
+</div>
+<div class='box-body'>
+<div class="form-group">
+
+</div>
+<table class='table'>
+<thead><tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Username</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+	<tr *ngFor="let user of userlist" class="unicorn-dark-theme">
+		<td>{{user.firstname}}</td>
+		<td>{{user.lastname}}</td>
+		<td>{{user.username}}</td>
+		<td><button mat-raised-button color="primary" (click)="open_dialog(user.id)">Edit</button>
+		<button mat-raised-button color="warn" (click)="open_dialog_alert(user.id)">Delete</button></td>
+	</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+

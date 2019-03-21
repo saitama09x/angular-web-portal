@@ -1,0 +1,15 @@
+<div class='container'>
+<div class='box-primary box'>
+<div class='box-header with-border'>
+<h1 class='box-title'>Demo</h1>
+</div>
+<div class='box-body'>
+<form class="example-container" [formGroup]="regiForm" (ngSubmit) = "onFormSubmit(regiForm.value)">
+<agm-map [latitude]="lat" [longitude]="lng"></agm-map>
+<button mat-raised-button color="accent">Submit</button>
+<button type='button' color="accent" mat-raised-button (click) = "clickme()" >Click</button>
+</form>
+</div>
+</div>
+</div>
+

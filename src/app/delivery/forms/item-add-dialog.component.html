@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Global Tracking</h2>
+<mat-dialog-content>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Weight</th>
+				<th>Height</th>
+				<th>Width</th>
+				<th>Quality</th>
+				<th>Life</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+  		<tr *ngFor="let item of items">
+  			<td>{{item.item_id}}</td>
+  			<td>{{item.weight}}</td>
+		  	<td>{{item.height}}</td>
+		  	<td>{{item.width}}</td>
+		  	<td>{{item.qty}}</td>
+		  	<td>{{item.quality + "%"}}</td>
+		  	<td>{{item.ripen | date:'MMM dd, yyyy'}}</td>
+		  	<td><button class='btn btn-sm btn-primary' (click)="onAddItems(item.id, $event)">Add</button></td>
+  		</tr>
+  		</tbody>
+	</table>
+
+</mat-dialog-content>

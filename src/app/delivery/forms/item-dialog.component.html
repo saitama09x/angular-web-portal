@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Global Tracking</h2>
+<mat-dialog-content>
+	<div class='form-group'>
+	<div class='clearfix'></div>
+	<div class='pull-left'>
+	<label>No. Items: {{ deliv_items ? deliv_items.length : '0' }}</label>
+	</div>
+	<div class='pull-right'>
+		<button class='btn btn-md btn-primary' (click)="onItemsDialog()">Add Items</button>
+	</div>
+	<div class='clearfix'></div>
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Weight</th>
+				<th>Height</th>
+				<th>Width</th>
+				<th>Quality</th>
+				<th>Life</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+  			<tr *ngFor="let item of deliv_items">
+  			<td>{{item.item_id}}</td>
+  			<td>{{item.weight}}</td>
+		  	<td>{{item.height}}</td>
+		  	<td>{{item.width}}</td>
+		  	<td>{{item.quality + "%"}}</td>
+		  	<td>{{item.ripen | date:'MMM dd, yyyy'}}</td>
+		  	<td><button class='btn btn-sm btn-danger' (click)="onRemoveItem(item.id, $event)">Remove</button></td>
+  		</tr>
+  		</tbody>
+	</table>
+
+</mat-dialog-content>
